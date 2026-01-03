@@ -14,7 +14,42 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      real_estate_tools: {
+        Row: {
+          category: string
+          created_at: string
+          id: string
+          image_url: string
+          is_verified: boolean
+          name: string
+          pricing_type: string
+          short_description: string
+          website_url: string
+        }
+        Insert: {
+          category: string
+          created_at?: string
+          id?: string
+          image_url: string
+          is_verified?: boolean
+          name: string
+          pricing_type: string
+          short_description: string
+          website_url: string
+        }
+        Update: {
+          category?: string
+          created_at?: string
+          id?: string
+          image_url?: string
+          is_verified?: boolean
+          name?: string
+          pricing_type?: string
+          short_description?: string
+          website_url?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
