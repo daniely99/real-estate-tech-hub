@@ -21,9 +21,13 @@ export type Database = {
           id: string
           image_url: string
           is_verified: boolean
+          long_description: string | null
           name: string
           pricing_type: string
           short_description: string
+          slug: string
+          status: string
+          submitter_email: string | null
           website_url: string
         }
         Insert: {
@@ -32,9 +36,13 @@ export type Database = {
           id?: string
           image_url: string
           is_verified?: boolean
+          long_description?: string | null
           name: string
           pricing_type: string
           short_description: string
+          slug: string
+          status?: string
+          submitter_email?: string | null
           website_url: string
         }
         Update: {
@@ -43,9 +51,13 @@ export type Database = {
           id?: string
           image_url?: string
           is_verified?: boolean
+          long_description?: string | null
           name?: string
           pricing_type?: string
           short_description?: string
+          slug?: string
+          status?: string
+          submitter_email?: string | null
           website_url?: string
         }
         Relationships: []

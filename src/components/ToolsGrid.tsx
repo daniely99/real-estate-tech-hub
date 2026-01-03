@@ -11,6 +11,7 @@ import { Loader2 } from "lucide-react";
 interface Tool {
   id: string;
   name: string;
+  slug: string;
   short_description: string;
   category: string;
   pricing_type: string;
@@ -72,6 +73,7 @@ const ToolsGrid = ({ tools, isLoading, sortBy, onSortChange }: ToolsGridProps) =
               <ToolCard
                 id={tool.id}
                 name={tool.name}
+                slug={tool.slug}
                 shortDescription={tool.short_description}
                 category={tool.category}
                 pricingType={tool.pricing_type}
