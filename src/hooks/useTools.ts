@@ -15,7 +15,7 @@ export const useTools = ({ searchQuery, categories, pricing, sortBy }: UseToolsP
   return useQuery({
     queryKey: ["tools", searchQuery, categories, pricing, sortBy],
     queryFn: async (): Promise<RealEstateTool[]> => {
-      let query = supabase.from("real_estate_tools").select("*");
+      let query = supabase.from("real_estate_tools").select("*").eq("status", "approved");
 
       // Apply category filter
       if (categories.length > 0) {
